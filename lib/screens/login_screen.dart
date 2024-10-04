@@ -19,23 +19,23 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SafeArea(
           child: Column(
             children: [
-              SizedBox(height: 10),
+              SizedBox(height: 1),
               Padding(
-                padding: EdgeInsets.all(20),
-                child: Image.asset("images/log.png"),
+                padding: EdgeInsets.all(1),
+                child: Image.asset("assets/images/up.png"),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 200),
               Padding(
                 padding: EdgeInsets.all(12),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     label: Text("Usuario"),
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: Icon(Icons.person_outline),
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              //SizedBox(height: 10),
               Padding(
                 padding: EdgeInsets.all(12),
                 child: TextField(
@@ -43,7 +43,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     label: Text("Contraseña"),
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: Icon(Icons.lock_outline),
                   ),
                 ),
               ),
@@ -73,7 +73,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-              )
+              ),
+              SizedBox(height: 180),
+              Padding(
+                padding: EdgeInsets.all(2),
+                child: Image.asset("assets/images/down.png"),
+              ),
             ],
           )
         ),

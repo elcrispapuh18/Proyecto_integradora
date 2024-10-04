@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prueba_integradora/screens/login_screen.dart';
+import 'package:prueba_integradora/screens/register_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -15,9 +16,9 @@ class WelcomeScreen extends StatelessWidget {
           children: [
             SizedBox(height: 40),
             Text(
-              "Vic's Pets",
+              "Vic's Cows",
               style: TextStyle(
-                color: Color.fromRGBO(191,101,57,1),
+                color: Color.fromRGBO(44,5,5,1),
                 fontSize: 34,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1,
@@ -27,14 +28,14 @@ class WelcomeScreen extends StatelessWidget {
             SizedBox(height: 40),
             Padding(
               padding: EdgeInsets.all(20),
-              child: Image.asset("images/log.png"),
+              child: Image.asset("assets/images/welcome.png"),
             ),
             SizedBox(height: 50),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Material(
-                  color: Color.fromRGBO(191,101,57,1),
+                  color: Color.fromRGBO(44,5,5,1),
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: (){
@@ -50,21 +51,23 @@ class WelcomeScreen extends StatelessWidget {
                         "Iniciar sesión",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 22,
+                          fontSize: 12,
                           fontWeight: FontWeight.bold
                         ),
                       ),
                     ),
                   ),
                 ),
-                Material( 
+                Material(
                   color: Color.fromRGBO(191,101,57,1),
                   borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: (){
-                      //
-                      //
-                      //
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                        builder: (context) => RegisterScreen(),
+                      ));
                     },
                     child: Padding(
                       padding:EdgeInsets.symmetric(vertical: 15, horizontal: 40),
@@ -72,13 +75,13 @@ class WelcomeScreen extends StatelessWidget {
                         "Registrarse",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 22,
+                          fontSize: 12,
                           fontWeight: FontWeight.bold
                         ),
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             )
           ],
