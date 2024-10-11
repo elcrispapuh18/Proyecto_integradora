@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "429874664647",
+    "project_id": "appc-4519f",
+    "storage_bucket": "appc-4519f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429874664647:android:19e3a704bede6753ad9ae2",
+        "android_client_info": {
+          "package_name": "V_Cows.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFmKlBY4tVA67lDzRYIfEYEDNnNoOdJwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429874664647:android:518cb14d2abba099ad9ae2",
+        "android_client_info": {
+          "package_name": "coffee_shop.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFmKlBY4tVA67lDzRYIfEYEDNnNoOdJwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429874664647:android:d259ecc037e757acad9ae2",
+        "android_client_info": {
+          "package_name": "com.example.prueba_integradora"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFmKlBY4tVA67lDzRYIfEYEDNnNoOdJwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429874664647:android:63b5e08aacb8648bad9ae2",
+        "android_client_info": {
+          "package_name": "v.cows.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFmKlBY4tVA67lDzRYIfEYEDNnNoOdJwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429874664647:android:18ab300a472ffdc8ad9ae2",
+        "android_client_info": {
+          "package_name": "v_cows.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFmKlBY4tVA67lDzRYIfEYEDNnNoOdJwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

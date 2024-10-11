@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prueba_integradora/screens/login_screen.dart';
 import 'package:prueba_integradora/screens/register_screen.dart';
-
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
 
@@ -14,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
         padding: EdgeInsets.all(10),
         child: Column(
           children: [
-            SizedBox(height: 40),
+            SizedBox(height: 110),
             Text(
               "Vic's Cows",
               style: TextStyle(
@@ -23,14 +22,15 @@ class WelcomeScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1,
                 wordSpacing: 2,
+                fontFamily: 'EB Garamond',
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 80),
             Padding(
               padding: EdgeInsets.all(20),
               child: Image.asset("assets/images/welcome.png"),
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 80),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -42,7 +42,7 @@ class WelcomeScreen extends StatelessWidget {
                       Navigator.push(
                         context, 
                         MaterialPageRoute(
-                        builder: (context) => LoginScreen(),
+                        builder: (context) => LoginScreen()
                       ));
                     },
                     child: Padding(
@@ -51,8 +51,9 @@ class WelcomeScreen extends StatelessWidget {
                         "Iniciar sesión",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'EB Garamond',
                         ),
                       ),
                     ),
@@ -75,8 +76,9 @@ class WelcomeScreen extends StatelessWidget {
                         "Registrarse",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'EB Garamond',
                         ),
                       ),
                     ),
