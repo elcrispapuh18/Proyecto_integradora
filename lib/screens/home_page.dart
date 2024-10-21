@@ -24,7 +24,7 @@ class _HomePageState extends State<Home> {
 int _selectedIndex = 0;
 static final List<Widget> _screens = [
     HomeScreen(),
-    RegistrosScreen(),
+    //RegistrosScreen(),
     VacasScreen(),
     TorosScreen(),
     ProfileScreen(),
@@ -48,10 +48,10 @@ Widget build(BuildContext context) {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           buildNavBarItem(CupertinoIcons.home, 'Inicio', 0),
-          buildNavBarItem(CupertinoIcons.list_bullet, 'Registros', 1),
-          buildNavBarItem(CupertinoIcons.doc, 'Vacas', 2),
-          buildNavBarItem(CupertinoIcons.doc, 'Toros', 3),
-          buildNavBarItem(CupertinoIcons.profile_circled, 'Profile', 4),
+          //buildNavBarItem(CupertinoIcons.list_bullet, 'Registros', 1),
+          buildNavBarItem(CupertinoIcons.list_bullet, 'Vacas', 1),
+          buildNavBarItem(CupertinoIcons.doc, 'Toros', 2),
+          buildNavBarItem(CupertinoIcons.profile_circled, 'Profile', 3),
         ],
       ),
     ),

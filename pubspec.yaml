@@ -46,6 +46,8 @@ dependencies:
   flutter_localization: ^0.2.2
   form_builder_validators: ^11.0.0
   flutter_form_builder: ^9.4.1
+  table_calendar: ^3.1.2
+  image_picker: ^1.1.2
 
 
 dependency_overrides:

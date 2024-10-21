@@ -57,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: TextStyle(
                     color: Color.fromRGBO(103, 92, 60, 1),
                     fontSize: 34,
-                    fontWeight: FontWeight.bold,
+                    //fontWeight: FontWeight.bold,
                     letterSpacing: 1,
                     wordSpacing: 2,
                     fontFamily: 'EB Garamond',
@@ -87,6 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                   ),
                 ),
+                SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: TextFormField(

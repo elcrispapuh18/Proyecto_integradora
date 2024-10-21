@@ -57,6 +57,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         name: 'email',
                         decoration: InputDecoration(
                           labelText: 'Correo',
+                          border: OutlineInputBorder(),
                           prefixIcon: Icon(Icons.email),
                         ),
                         validator: FormBuilderValidators.compose([
@@ -69,6 +70,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         name: 'user',
                         decoration: InputDecoration(
                           labelText: 'Nombre de Usuario',
+                          border: OutlineInputBorder(),
                           prefixIcon: Icon(Icons.account_circle_outlined),
                         ),
                         validator: FormBuilderValidators.required(),
@@ -78,6 +80,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         name: 'phone',
                         decoration: InputDecoration(
                           labelText: 'Número telefónico',
+                          border: OutlineInputBorder(),
                           prefixIcon: Icon(Icons.call),
                         ),
                         keyboardType: TextInputType.number,
@@ -92,6 +95,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         name: 'address',
                         decoration: InputDecoration(
                           labelText: 'Domicilio',
+                          border: OutlineInputBorder(),
                           prefixIcon: Icon(Icons.fmd_good_outlined),
                         ),
                         validator: FormBuilderValidators.required(),
@@ -102,6 +106,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         obscureText: passToggle,
                         decoration: InputDecoration(
                           labelText: 'Contraseña',
+                          border: OutlineInputBorder(),
                           prefixIcon: Icon(Icons.lock_outline),
                           suffixIcon: IconButton(
                             icon: Icon(
@@ -127,6 +132,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         obscureText: passToggle,
                         decoration: InputDecoration(
                           labelText: 'Confirme su Contraseña',
+                          border: OutlineInputBorder(),
                           prefixIcon: Icon(Icons.enhanced_encryption_outlined),
                         ),
                         validator: (val) {
