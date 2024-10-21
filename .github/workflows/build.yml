@@ -1,9 +1,11 @@
-name: CI Pipeline for Flutter
+name: CI Pipeline
 
 on:
   push:
     branches:
       - main
+      - feature/*
+      - hotfix/*
   pull_request:
     branches:
       - main
@@ -11,18 +13,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout the code
       uses: actions/checkout@v2
 
-    - name: Set up Flutter
-      uses: subosito/flutter-action@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
       with:
-        flutter-version: '3.13.0'  
+        node-version: '14'
 
     - name: Install dependencies
-      run: flutter pub get
+      run: npm install
 
-    - name: Run Flutter tests
-      run: flutter test
+    - name: Run tests
+      run: npm test
