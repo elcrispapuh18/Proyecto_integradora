@@ -1,29 +1,36 @@
+#name: CI Pipeline
+
+#on:
+#  push:
+#    branches:
+#      - main
+#  pull_request:
+#     branches:
+#      - main
+
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+
+#    steps:
+#      -users: actions/checkout@v4 
 name: CI Pipeline
 
 on:
-  push:
-    branches:
-      - main
-      - feature/*
-      - hotfix/*
   pull_request:
-    branches:
+    branches: 
       - main
+  
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the code
-      uses: actions/checkout@v2
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests
-      run: npm test
+      - uses: actions/checkout@v4
+      - uses: ./
+        with:
+          sdk: dev
+      - run: dart pub get
+      - run: dart analyze --fatal-infos
+      - run: dart tool/sig.dart --verify
+      - run: npm run build
