@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:intl/intl.dart';
-
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -138,7 +136,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       IconButton(
-                        icon: Icon(Icons.edit, color: Color.fromRGBO(191, 101, 57, 1),),
+                        icon: Icon(
+                          Icons.edit,
+                          color: Color.fromRGBO(191, 101, 57, 1),
+                        ),
                         onPressed: () => _showEditEventDialog(events[index]),
                       ),
                       IconButton(

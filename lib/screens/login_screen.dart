@@ -16,30 +16,51 @@ class _LoginScreenState extends State<LoginScreen> {
   
   Future<void> loginUser() async {
     try {
-      // Intentar iniciar sesión con Firebase
-      UserCredential userCredential = await FirebaseAuth.instance
-          .signInWithEmailAndPassword(
-        email: emailController.text.trim(),
-        password: passController.text.trim(),
-      );
+    // Intentar iniciar sesión con Firebase
+    UserCredential userCredential = await FirebaseAuth.instance
+        .signInWithEmailAndPassword(
+      email: emailController.text.trim(),
+      password: passController.text.trim(),
+    );
 
-      // Si tiene éxito, navegar a la pantalla de inicio
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => Home(),
-        ),
-      );
-    } catch (e) {
-      // Si hay un error, mostrar un mensaje
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text("Error al iniciar sesión: ${e.toString()}"),
-          backgroundColor: Colors.red,
-        ),
-      );
+    // Si tiene éxito, navegar a la pantalla de inicio
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => Home(),
+      ),
+    );
+  } on FirebaseAuthException catch (e) {
+    String errorMessage;
+
+    // Capturar errores específicos de Firebase
+    if (e.code == 'user-not-found') {
+      errorMessage = 'No existe ningún usuario con ese correo.';
+    } else if (e.code == 'wrong-password') {
+      errorMessage = 'Contraseña incorrecta.';
+    } else if (e.code == 'invalid-password') {
+      errorMessage = 'El formato del correo no es válido.';
+    } else {
+      errorMessage = 'Ocurrió un error inesperado. Inténtalo de nuevo.';
     }
+
+    // Mostrar un mensaje de error en un SnackBar
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(errorMessage),
+        backgroundColor: Colors.red,
+      ),
+    );
+  } catch (e) {
+    // En caso de un error genérico
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text("Error inesperado: ${e.toString()}"),
+        backgroundColor: Colors.red,
+      ),
+    );
   }
+}
 
   @override
   Widget build(BuildContext context) {
